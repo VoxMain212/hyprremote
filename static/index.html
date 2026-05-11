@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Remote PC - Hyprland Control</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header glass">
+            <div class="header-content">
+                <h1>🖥️ Remote PC</h1>
+                <div id="status" class="status">🔴 Отключено</div>
+            </div>
+        </header>
+
+        <section class="section glass">
+            <h2 class="section-title">🖱️ Touchpad</h2>
+            <div id="trackpad" class="trackpad">
+                <span class="trackpad-hint">Проведите пальцем для перемещения</span>
+            </div>
+            <div class="mouse-buttons">
+                <button id="btn-left" class="btn btn-mouse">🖱️ Left</button>
+                <button id="btn-middle" class="btn btn-mouse">🖱️ Middle</button>
+                <button id="btn-right" class="btn btn-mouse">🖱️ Right</button>
+            </div>
+        </section>
+
+        <section class="section glass">
+            <h2 class="section-title">📑 Workspaces</h2>
+            <div class="workspace-grid">
+                <button class="key-combo btn btn-workspace" data-keys="SUPER,1">1</button>
+                <button class="key-combo btn btn-workspace" data-keys="SUPER,2">2</button>
+                <button class="key-combo btn btn-workspace" data-keys="SUPER,3">3</button>
+                <button class="key-combo btn btn-workspace" data-keys="SUPER,4">4</button>
+                <button class="key-combo btn btn-workspace" data-keys="SUPER,5">5</button>
+                <button class="key-combo btn btn-workspace" data-keys="SUPER,6">6</button>
+                <button class="key-combo btn btn-workspace" data-keys="SUPER,7">7</button>
+                <button class="key-combo btn btn-workspace" data-keys="SUPER,8">8</button>
+                <button class="key-combo btn btn-workspace" data-keys="SUPER,9">9</button>
+                <button class="key-combo btn btn-workspace" data-keys="SUPER,0">10</button>
+            </div>
+        </section>
+
+        <section class="section glass">
+            <h2 class="section-title">🔊 Volume</h2>
+            <div class="control-row">
+                <button id="vol-down" class="btn btn-control">🔉</button>
+                <input type="range" id="vol-slider" class="slider" min="0" max="100" value="50">
+                <button id="vol-up" class="btn btn-control">🔊</button>
+                <button id="vol-mute" class="btn btn-control">🔇</button>
+            </div>
+        </section>
+
+        <section class="section glass">
+            <h2 class="section-title">☀️ Brightness</h2>
+            <div class="control-row">
+                <button id="bl-down" class="btn btn-control">☀️-</button>
+                <input type="range" id="bl-slider" class="slider" min="0" max="100" value="70">
+                <button id="bl-up" class="btn btn-control">☀️+</button>
+            </div>
+        </section>
+
+        <section class="section glass">
+            <h2 class="section-title">🎵 Media</h2>
+            <div class="media-controls">
+                <button id="media-prev" class="btn btn-media">⏮️</button>
+                <button id="media-play" class="btn btn-media btn-large">⏯️</button>
+                <button id="media-next" class="btn btn-media">⏭️</button>
+            </div>
+        </section>
+
+        <section class="section glass">
+            <h2 class="section-title">💻 Command</h2>
+            <div class="command-row">
+                <input type="text" id="cmd-input" class="cmd-input" placeholder="Введите команду...">
+                <button id="cmd-run" class="btn btn-run">▶️ Выполнить</button>
+            </div>
+        </section>
+
+        <div id="log" class="log">Готов к работе</div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
